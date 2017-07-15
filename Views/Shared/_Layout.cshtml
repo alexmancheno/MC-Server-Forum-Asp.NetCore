@@ -1,0 +1,707 @@
+﻿<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Gramziu Themes - Index page</title>
+    <link rel="alternate" type="application/atom+xml" title="Feed - Gramziu Themes" href="http://gramziu.pl/phpBB/feed.php">
+    <link rel="alternate" type="application/atom+xml" title="Feed - New Topics" href="http://gramziu.pl/phpBB/feed.php?mode=topics">
+    
+    <link rel="stylesheet" href="~/css/stylesheet.min.css?assets_version=174">
+    <link rel="stylesheet" href="~/css/bootstrap-default.css">
+    <link rel="stylesheet" href="~/css/colors.min.css">
+    <link href="~/css/lastpostavatar.css?assets_version=174" rel="stylesheet" type="text/css" media="screen" />
+    <link href="~/css/boardannouncements.css?assets_version=174" rel="stylesheet" type="text/css" media="screen" />
+    <link href="~/css/collapsiblecategories.css?assets_version=174" rel="stylesheet" type="text/css" media="screen" />
+
+
+    <script> 
+        WebFontConfig = {
+            google: {
+                families: ['Open Sans:300,400,400italic,600,700,700italic']
+            },
+            custom: {
+                families: ['FontAwesome'],
+                urls: ['//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css']
+            }
+        };
+
+        (function (d) {
+            var wf = d.createElement('script'), s = d.scripts[0];
+            wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1.5.18/webfont.js';
+            wf.async = true;
+            s.parentNode.insertBefore(wf, s);
+        })(document);
+    </script>
+
+    <link rel="stylesheet" href="./styles/ravaio/theme/stylesheet.min.css?assets_version=174">
+
+    <style>
+        .site_logo {
+            background-image: url("./ext/gramziu/ravaio/assets/site_logo.svg");
+            height: 36px;
+            width: 26px;
+        }
+
+        .dropdown-profile {
+            left: 148px;
+        }
+
+        .rtl .dropdown-profile {
+            left: auto;
+            right: 148px;
+        }
+
+        .post-actions {
+            clear: both;
+        }
+
+        #back-to-top.btt-docked {
+            bottom: auto;
+            position: absolute;
+            top: -18px;
+        }
+
+        .is-sticky #wrap-header,
+        .is-sticky #wrap-header-index {
+            box-shadow: 0 0 6px rgba(0, 0, 0, 0.42);
+        }
+
+        .anchor {
+            margin-top: -56px;
+            padding-top: 56px;
+        }
+
+        #site-desc-full, #site-desc-small {
+            background-image: url("./ext/gramziu/ravaio/assets/ra_head_index_img_0.png");
+        }
+
+        #sub-header {
+            background-image: url("./ext/gramziu/ravaio/assets/ra_head_other_img_0.png");
+        }
+    </style>
+    <style>
+        #theme-variant-0:before {
+            background-color: #EBEBEB;
+        }
+
+        #theme-variant-1:before {
+            background-color: #455A64;
+        }
+
+        #theme-variant-2:before {
+            background-color: #2F2F2F;
+        }
+    </style>
+    <link rel="stylesheet" href="./ext/gramziu/ravaio/assets/colors.min.css">
+
+    <link href="./ext/bb3mobi/lastpostavatar/styles/ravaio/theme/lastpostavatar.css?assets_version=174" rel="stylesheet" type="text/css" media="screen" />
+    <link href="./ext/phpbb/boardannouncements/styles/ravaio/theme/boardannouncements.css?assets_version=174" rel="stylesheet" type="text/css" media="screen" />
+    <link href="./ext/phpbb/collapsiblecategories/styles/ravaio/theme/collapsiblecategories.css?assets_version=174" rel="stylesheet" type="text/css" media="screen" />
+
+
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-73438105-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+
+</head>
+<body id="" class="nojs notouch section-index ltr ">
+    <div id="wrap">
+        <div id="wrap-inner">
+            <a id="top" class="anchor" accesskey="t"></a>
+            <div id="wrap-header-index" style="background-color: #455a64">
+                <div class="site-header chunk">
+                    <a id="logo" href="./index.php?style=6" title="Board index"><span class="imageset site_logo"></span></a>
+                    <nav>
+                        <ul class="site-nav">
+
+                            <li id="main-search-box" class="re-md-r">
+                                <a data-toggle="dropdown" class="w-drop" href="./search.php?style=6"><i class="fa fa-search"></i></a>
+                                <div class="dropdown-search">
+                                    <form action="./search.php?style=6" method="get">
+                                        <fieldset>
+                                            <button type="submit" title="Search"><i class="fa fa-search"></i></button><div><input name="keywords" type="search" maxlength="128" title="Search for keywords" size="20" value="" placeholder="Search…" id="main-search" /></div>
+                                            <input type="hidden" name="style" value="6" />
+
+                                        </fieldset>
+                                    </form>
+                                </div>
+                            </li>
+
+
+                            <li class="">
+                                <a data-toggle="dropdown" href="#" id="header-mini-menu">
+                                    <i class="fa fa-bars"></i>
+                                </a>
+                                <ul id="more-menu" class="dropdown-box">
+                                    <li id="main-search-box-md" class="re-md">
+                                        <form action="./search.php?style=6" method="get">
+                                            <fieldset>
+                                                <button type="submit" title="Search"><i class="fa fa-search"></i></button><div><input name="keywords" type="search" maxlength="128" title="Search for keywords" size="20" value="" placeholder="Search…" id="main-search-md" /></div>
+                                                <input type="hidden" name="style" value="6" />
+
+                                            </fieldset>
+                                        </form>
+                                    </li>
+                                    <li class="re-md">
+                                        <a href="./faq.php?style=6" rel="help" title="Frequently Asked Questions"><i class="fa fa-question"></i>FAQ</a>
+                                    </li>
+
+                                    <li class="separator re-md"></li>
+
+                                    <li class="re-md">
+                                        <a href="#" class="w-drop" data-toggle="dropdown">Menu</a>
+                                        <ul class="dropdown-box">
+                                            <li>
+                                                <a href="#">
+                                                    <i class="fa fa-tachometer"></i>
+                                                    Example
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="w-drop">
+                                                    <i class="fa fa-tachometer"></i>
+                                                    Example
+                                                </a>
+                                                <ul class="dropdown-box">
+                                                    <li>
+                                                        <a href="#" class="w-drop">
+                                                            <i class="fa fa-tachometer"></i>
+                                                            Example
+                                                        </a>
+                                                        <ul class="dropdown-box">
+                                                            <li>
+                                                                <a href="#">
+                                                                    <i class="fa fa-tachometer"></i>
+                                                                    Example
+                                                                </a>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">
+                                                            <i class="fa fa-tachometer"></i>
+                                                            Example
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">
+                                                            <i class="fa fa-tachometer"></i>
+                                                            Example
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <i class="fa fa-tachometer"></i>
+                                                    Example
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="re-md">
+                                        <a href="#" class="w-drop" data-toggle="dropdown"><i class="fa fa-shopping-basket"></i><span>Menu #2</span></a>
+                                        <div class="dropdown-mega">
+                                            <div class="chunk-inner">
+                                                <div class="chunk-25">
+                                                    <h6>Your title</h6>
+                                                    <p>
+                                                        Here you can see mega dropdown example!
+                                                        <br><br>
+                                                        It can acts like a normal space and it supports site grid.
+                                                    </p>
+                                                </div>
+                                                <div class="chunk-25">
+                                                    <h6>Your title</h6>
+                                                    <img src="http://gramziu.pl/images/buy_it.png" alt="Buy it now!" style="border-radius: 2px; display: block;">
+                                                </div>
+                                                <div class="chunk-25">
+                                                    <h6>Your title</h6>
+                                                    <ul>
+                                                        <li>
+                                                            <a href="#" title="First dropdown item">First dropdown item</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#" title="Second dropdown item">
+                                                                <i class="fa fa-rocket"></i>
+                                                                Second dropdown item
+                                                            </a>
+                                                        </li>
+                                                        <ul>
+                                                            <button class="button">Example</button>
+                                                            <button class="button-flat">Example</button>
+                                                            <button class="button-round"><i class="fa fa-bomb"></i></button>
+                                                </div>
+                                                <div class="chunk-25">
+                                                    <h6>Your title</h6>
+                                                    <ul>
+                                                        <li>
+                                                            <a href="#" title="First dropdown item">First dropdown item</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#" title="Second dropdown item">
+                                                                <i class="fa fa-rocket"></i>
+                                                                Second dropdown item
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#" title="Second dropdown item">
+                                                                <i class="fa fa-rocket"></i>
+                                                                Second dropdown item
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#" title="Second dropdown item">
+                                                                <i class="fa fa-rocket"></i>
+                                                                Second dropdown item
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#" title="Second dropdown item">
+                                                                <i class="fa fa-rocket"></i>
+                                                                Second dropdown item
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#" title="Second dropdown item">
+                                                                <i class="fa fa-rocket"></i>
+                                                                Second dropdown item
+                                                            </a>
+                                                        </li>
+                                                        <ul>
+                                                </div>
+                                            </div>
+                                            <div class="chunk">
+                                                <div class="info-box">
+                                                    Mega Menu Info Box
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                    <li class="separator re-md"></li>
+
+                                    <li><a href="./search.php?style=6&amp;search_id=unanswered"><i class="fa fa-comment-o"></i>Unanswered posts</a></li>
+                                    <li><a href="./search.php?style=6&amp;search_id=active_topics"><i class="fa fa-commenting-o"></i>Active topics</a></li>
+
+                                </ul>
+                            </li>
+
+
+                        </ul>
+
+                        <ul id="breadcrumbs" class="bread-normal"><li>@Html.ActionLink("Board Index", "Index", "Home")</li></ul>
+                    </nav>
+                </div>
+            </div>
+            
+            
+            <div id="render-body" style="display:block">
+                @RenderBody()
+            </div>
+            
+
+            <div class="background-deep">
+                <div class="chunk">
+
+                    <div id="footer-custom">
+
+                        <div class="stat-block online-list">
+                            <h3>Who is online</h3>				<p>
+                                In total there is <strong>1</strong> user online :: 0 registered, 0 hidden and 1 guest<br><span class="dimmed">based on users active over the past 5 minutes</span><br><br>Most users ever online was <strong>51</strong> on 11 Apr 2017, 10:11<br><br>Registered users: No registered users
+                                <br>Legend: <a style="color:#AA0000" href="./memberlist.php?style=6&amp;mode=group&amp;g=5">Administrators</a>, <a style="color:#00AA00" href="./memberlist.php?style=6&amp;mode=group&amp;g=4">Global moderators</a>, <span style="color:#9E8DA7">Bots</span>, <a href="./memberlist.php?style=6&amp;mode=group&amp;g=2">Registered users</a>
+                            </p>
+                        </div>
+
+                        <div class="stat-block footer-block">
+                            <h3>Important links</h3><ul>
+                                <li>
+                                    <a href="#">Our Rules</a>
+                                </li>
+                                <li>
+                                    <a href="#">Frequently Asked Questions</a>
+                                </li>
+                                <li>
+                                    <a href="#">BBCode Examples</a>
+                                </li>
+                                <li>
+                                    <a href="#">Empty Link</a>
+                                </li>
+                                <li>
+                                    <a href="#">Creating an account</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="stat-block footer-block">
+                            <h3>About us</h3><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br><br>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        </div>
+                    </div>
+
+
+                    <div class="stat-block statistics">
+                        <p>
+                            <span>Total posts <strong>156</strong></span><span>Total topics <strong>26</strong></span><span>Total members <strong>1458</strong></span><span>Our newest member <strong><a href="./memberlist.php?style=6&amp;mode=viewprofile&amp;u=1526" class="username">fojmyti</a></strong></span>
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+
+
+            <a id="start_here" class="anchor"></a>
+
+
+
+            <div id="wrap-footer">
+
+                @*<a id="back-to-top" href="#phpbb"><i class="fa fa-angle-up"></i></a>*@
+                <div class="chunk-inner">
+                    <div class="chunk-25 rc-posts">
+                        <a href="./viewtopic.php?style=6&amp;p=77#p77" class="rc-link">
+                            <div class="rc-posts-out">
+                                <div class="rc-avatar"><img class="avatar" src="./download/file.php?avatar=56_1449522317.jpg" width="80" height="80" alt="User avatar" /></div>						<div class="rc-title">Re: Good topic</div>
+                                <div class="rc-content">It's only example. There's so many examples. I won't create more examples?</div>
+                                <div class="rc-details">
+                                    <span class="rc-author">Kamziu</span>,
+                                    <span class="rc-time">07 Dec 2015, 21:06</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="chunk-25 rc-posts">
+                        <a href="./viewtopic.php?style=6&amp;p=76#p76" class="rc-link">
+                            <div class="rc-posts-out">
+                                <div class="rc-avatar"><img class="avatar" src="./download/file.php?avatar=55_1449522198.jpg" width="80" height="80" alt="User avatar" /></div>						<div class="rc-title">Re: Hello!</div>
+                                <div class="rc-content">Let's add something else than just pasting this &quot;lorem ipsum&quot;!</div>
+                                <div class="rc-details">
+                                    <span class="rc-author">Tramziu</span>,
+                                    <span class="rc-time">07 Dec 2015, 21:01</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="chunk-25 rc-posts">
+                        <a href="./viewtopic.php?style=6&amp;p=75#p75" class="rc-link">
+                            <div class="rc-posts-out">
+                                <div class="rc-avatar"><img class="avatar" src="./download/file.php?avatar=50_1449518818.jpg" width="80" height="80" alt="User avatar" /></div>						<div class="rc-title">Re: Next lorem ipsum text</div>
+                                <div class="rc-content">Ah, again! Always this &quot;lorem ipsum&quot; text from you!</div>
+                                <div class="rc-details">
+                                    <span class="rc-author">Ramziu</span>,
+                                    <span class="rc-time">07 Dec 2015, 20:55</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="chunk-25 rc-posts">
+                        <a href="./viewtopic.php?style=6&amp;p=73#p73" class="rc-link">
+                            <div class="rc-posts-out">
+                                <div class="rc-avatar"><img class="avatar" src="./download/file.php?avatar=54_1449521014.jpg" width="80" height="80" alt="User avatar" /></div>						<div class="rc-title">Re: Another example</div>
+                                <div class="rc-content">
+                                    Example from me:
+
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                                </div>
+                                <div class="rc-details">
+                                    <span class="rc-author">Famziu</span>,
+                                    <span class="rc-time">07 Dec 2015, 20:42</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="clear"></div>
+                    <hr class="rc-hr">
+                </div>
+
+                <div class="site-footer chunk">
+
+
+                    <nav>
+                        <ul>
+                            <li>
+                                <a href="./index.php?style=6" data-navbar-reference="index">Board index</a>
+                            </li>
+                            <li>
+                                <a href="./faq.php?style=6" rel="help" title="Frequently Asked Questions">FAQ</a>
+                            </li>
+                            <li>
+                                <a href="./memberlist.php?style=6&amp;mode=team">The team</a>
+                            </li>
+                            <li>
+                                <a href="./memberlist.php?style=6&amp;mode=contactadmin">Contact us</a>
+                            </li>
+                            <li class="rside">
+                                All times are <abbr title="UTC">UTC</abbr>
+                            </li>
+                            <li class="rside">
+                                It is currently 02 Jun 2017, 00:31
+                            </li>
+                            <li class="">
+                                <a href="#"><i class="fa fa-shopping-basket"></i></a>
+                            </li>
+                        </ul>
+                    </nav>
+
+                    <div class="footer-text">Powered by <a href="https://www.phpbb.com/">phpBB</a>® Forum Software © phpBB Limited<span class="rside">Ravaio Theme by <a href="https://themeforest.net/user/Gramziu/">Gramziu</a></span></div><div class="clear"></div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="modal fade" id="quick-login" tabindex="-1" role="dialog" aria-labelledby="Login">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <form method="post" action="./ucp.php?style=6&amp;mode=login">
+                    <fieldset>
+                        <div class="modal-header">
+                            <button type="button" data-dismiss="modal" class="modal-close"><i class="fa fa-times"></i></button>
+                            <h4 id="Login"><a href="./ucp.php?style=6&amp;mode=login">Login</a></h4>
+                        </div>
+                        <div class="modal-body">
+                            <label for="username"><span class="w-input">Username:</span><br><input type="text" tabindex="1" name="username" id="username" size="10" class="input" title="Username" /></label><br>
+                            <label for="password"><span class="w-input">Password:</span><br><input type="password" tabindex="2" name="password" id="password" size="10" class="input" title="Password" autocomplete="off" /></label><br>
+                            <a href="./ucp.php?style=6&amp;mode=sendpassword">I forgot my password</a><br><br>																					<label for="autologin"><input type="checkbox" tabindex="4" name="autologin" id="autologin" class="check" /><span class="check"></span><span>Remember me</span></label><br>
+                            <label for="viewonline"><input type="checkbox" name="viewonline" id="viewonline" tabindex="5" class="check" /><span class="check"></span><span>Hide my online status this session</span></label>
+                        </div>
+                        <div class="modal-footer w-register-link">
+                            <input type="submit" tabindex="5" name="login" value="Login" class="button" />
+                            <a href="./ucp.php?style=6&amp;mode=register">Register</a>
+                            <input type="hidden" name="redirect" value="./index.php?style=6&amp;style=6" />
+
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div style="display: none;">
+        <a id="bottom" class="anchor" accesskey="z"></a>
+    </div>
+
+    <div id="darkenwrapper" data-ajax-error-title="AJAX error" data-ajax-error-text="Something went wrong when processing your request." data-ajax-error-text-abort="User aborted request." data-ajax-error-text-timeout="Your request timed out; please try again." data-ajax-error-text-parsererror="Something went wrong with the request and the server returned an invalid reply.">
+        <div id="darken"></div>
+    </div>
+
+    <div id="phpbb_alert" class="modal-bb" data-l-err="Error" data-l-timeout-processing-req="Request timed out.">
+        <div class="modal-bb-content">
+            <div class="modal-bb-body">
+                <a href="#" class="modal-bb-close alert_close"><i class="fa fa-times"></i></a>
+                <span class="alert_title"></span>
+                <p class="alert_text"></p>
+            </div>
+        </div>
+    </div>
+    <div id="phpbb_confirm" class="modal-bb">
+        <div class="modal-bb-content">
+            <div class="modal-bb-body">
+                <a href="#" class="modal-bb-close alert_close"><i class="fa fa-times"></i></a>
+                <p class="alert_text"></p>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+
+
+
+    <script>
+        $(window).load(function () {
+            var minheight = $(window).height();
+            var minheightwrap = $('#wrap').height();
+            var mainheight = $('#mbrs').outerHeight();
+
+            if (minheight > minheightwrap) {
+                $('#mbrs').css('min-height', minheight - minheightwrap + mainheight);
+            }
+        });
+    </script>
+    <script>
+        $(document).ready(function () {
+            $('#wrap-header, #wrap-header-index').sticky({ zIndex: 2 });
+        });
+    </script>
+    <script>
+        $('#back-to-top').click(function (e) {
+            e.preventDefault();
+            $('html, body').animate({
+                scrollTop: 0
+            }, 400);
+        });
+
+        $(window).on('scroll load', function () {
+            var y = $(this).scrollTop();
+            if (y > 164) {
+                $('#back-to-top').addClass('btt-visible');
+            } else {
+                $('#back-to-top').removeClass('btt-visible');
+            }
+
+            var wrapFooter = $('#wrap-footer').offset().top;
+            var windowHeight = $(window).height();
+            if (y > wrapFooter - windowHeight + 42) {
+                $('#back-to-top').addClass('btt-docked');
+            } else {
+                $('#back-to-top').removeClass('btt-docked');
+            }
+        });
+    </script>
+    <script>
+        var variant_list = [["Main", 0, "0"], ["Secondary", 1, "0"], ["Tertiary", 2, "0"]],
+            theme_variant,
+            theme_variant_radio;
+
+        if (variant_list.length >= 2) {
+            jQuery.each(variant_list, function () {
+                theme_variant = $('<label>', {
+                    id: 'theme-variant-' + $(this)[1],
+                    class: 'theme-variant',
+                    text: $(this)[0]
+                });
+
+                theme_variant_radio = $('<input>', {
+                    value: $(this)[1],
+                    type: 'radio',
+                    name: 'ra_variant'
+                });
+
+                theme_variant.prepend(theme_variant_radio);
+                $('#theme-variants').append(theme_variant);
+            });
+
+            $('.theme-variant').click(function () {
+                $(this).children('input').attr('checked', 'checked');
+                $('#theme-variants').submit();
+            });
+        } else {
+            $('#theme-variants').parents('.sidebar-block').remove();
+        }
+    </script>
+    <script>
+        $(function () {
+
+            var sidebarRecentPostDiv = $("#sidebar-recent-topics");
+
+            if (sidebarRecentPostDiv.length) {
+
+                var contentWrap = document.createElement("div");
+                contentWrap.className = ("sidebar-recent-content loading");
+                sidebarRecentPostDiv.append(contentWrap);
+
+                $.ajax({
+                    url: 'http://gramziu.pl/phpBB/feed.php?mode=topics', success: function (data) {
+                        sidebarRecentPostDiv.removeClass('loading');
+                        $('.sidebar-recent-content').removeClass('loading');
+
+                        $(data).find("entry").each(function (i) {
+                            var el = $(this);
+                            var entryWrap = document.createElement("div");
+
+                            var entryTitle = document.createElement("a");
+                            var entryAuthor = document.createElement("span");
+                            var entryCategory = document.createElement("span");
+
+                            entryTitle.className = ("sidebar-recent-title");
+                            entryAuthor.className = ("sidebar-recent-author");
+                            entryCategory.className = ("sidebar-recent-category");
+
+                            function cutText(name) {
+                                if (name == "title") {
+                                    var elementText = el.find("title").text();
+                                    elementText = elementText.substring(elementText.indexOf("•") + 2);
+                                } else {
+                                    var elementText = el.find("title").text();
+                                    elementText = elementText.substring(0, elementText.indexOf("•") - 1);
+                                }
+
+                                return elementText;
+                            };
+
+                            entryTitle.textContent = cutText("title");
+                            entryAuthor.textContent = "by " + el.find("author").text() + " ";
+                            entryCategory.textContent = "in " + cutText("category");
+                            entryURL = el.find("id").text();
+
+                            $(entryTitle).attr("href", entryURL);
+
+                            entryWrap.append(entryTitle);
+                            entryWrap.append(entryAuthor);
+                            entryWrap.append(entryCategory);
+
+                            contentWrap.append(entryWrap);
+
+                            if (++i >= 6) {
+                                return false;
+                            }
+                        });
+                    }, cache: false
+                });
+            }
+        });
+    </script>
+
+    <script>
+        $(function () {
+            $('select').chosen({
+                width: "auto",
+                disable_search_threshold: 6
+            });
+        });
+
+        $('.dropdown-profile .w-drop, .dropdown-box-big .w-drop, .dropdown-mega .w-drop, .dropdown-box .w-drop').click(function (e) {
+            $(this).toggleClass('open');
+            $(this).next('.dropdown-box-big, .dropdown-mega, .dropdown-box').toggle();
+            e.stopPropagation();
+            e.preventDefault();
+        });
+
+        $('.dropdown-box-big').click(function (e) {
+            if ($(this).children('form')) {
+                e.stopPropagation();
+            }
+        });
+
+        $('#quick-login').on('shown.bs.modal', function () {
+            $('#username').focus();
+        });
+
+        $('#main-search-box').on('shown.bs.dropdown', function () {
+            $('#main-search').focus();
+        });
+
+        $('#side-toggle').click(function () {
+            $("#side-toggle").toggleClass('side-toggle');
+            $("#cp-sidebar").toggleClass('cp-sidebar-visible');
+            $("#cp-main").toggleClass('cp-sidebar-visible');
+        });
+
+    </script>
+    @RenderSection("scripts", required: false)
+    <script type="text/javascript" src="~/content/js/collapsiblecategories.js?assets_version=174"></script>
+
+    <script type="text/javascript" src="~/content/js/boardannouncements.js?assets_version=174"></script>
+
+    <script type="text/javascript" src="~/content/js/core.min.js?assets_version=174"></script>
+
+    <script type="text/javascript" src="~/content/js/forum_fn.min.js?assets_version=174"></script>
+
+    <script type="text/javascript" src="~/content/js/ajax.min.js?assets_version=174"></script>
+
+    <script type="text/javascript" src="~/content/js/bootstrap.min.js?assets_version=174"></script>
+
+    <script type="text/javascript" src="~/content/js/chosen.jquery.min.js?assets_version=174"></script>
+
+    <script type="text/javascript" src="~/content/js/jquery.sticky.min.js?assets_version=174"></script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+@model MC_Forum.Models.Post
+
+@{
+    ViewBag.Title = "Submit Post";
+}
+
+<link href="~/css/submit_post.css" rel="stylesheet" />
+<div class="container">
+    <div class="row">
+        <h4>Post a Job</h4>
+        <div class="col col-md-2"></div>
+        <div class="col col-md-8">
+            @using (Html.BeginForm())
+            {
+                <div class="form-group required">
+                    <label class="control-label">Post Title:</label>
+                    @Html.EditorFor(model => model.PostTitle, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.PostTitle, "", new { htmlAttributes = new { @class = "text-danger"}})
+                </div>
+                <div class="form-group required">
+                    <label for="" class='control-label'>Post Body:</label>
+                    @Html.TextAreaFor(model => model.PostBody, 10, 20, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.PostBody, "", new { @class = "text-danger" })
+                </div>
+                <hr size="5">
+                <ul class="media-date text-uppercase reviews list-inline">
+                    @*<li class="mm"><button type="submit" class="btn btn-primary">Save Draft</button></li>
+                    <li class="mm"><button type="submit" class="btn btn-primary">Preview</button></li>*@
+                    <li class="aaaa"><button type="submit" class="btn btn-success">Publish</button></li>
+                </ul>
+            }
+        </div>
+        <div class="col col-md-2"></div>
+    </div>
+</div>

@@ -1,0 +1,363 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div id="page-body" role="main">
+    <div id="site-desc-full">
+        <div class="chunk">
+            <div id="page-description">
+                <h1>Gramziu Themes</h1>
+                <h2>Themes preview site</h2>
+            </div>
+        </div>
+    </div>
+
+    <div id="main-index" class="background-main">
+        @*@if (Session["UserId"] != null)
+        {
+        <div class="chunk">
+            <div id="phpbb_announcement" class="box-normal">
+                Hello, @Session["Username"].ToString()
+            </div>
+        </div>
+        }*@
+        <div class="chunk">
+
+            <div class="forumlist-main">
+                <div class="forumlist-main-inner">
+
+
+                    <ol id="forums-wrap">
+
+
+                        <a class="category" id="category1" style="display: none; height: 0"></a>
+                        <li class="fora-bg">
+                            <h3>
+                                <a href="./viewforum.php?style=6&amp;f=1" title="Forum category">Main</a>
+                                <a href="/phpBB/app.php/collapse/fid_1?hash=478eab44&amp;style=6"
+                                   class="collapse-btn collapse-hide"
+                                   data-hidden=""
+                                   data-ajax="phpbb_collapse"
+                                   data-overlay="true"
+                                   title="Toggle visibility of this forum category"
+                                   style="display: none; line-height: 0;"></a>
+                            </h3>
+                            <ol>
+
+
+
+
+
+                                <li>
+
+                                    <div class="fora-icon forum_read" title="No unread posts">
+                                        <div></div>
+                                    </div>
+                                    <div class="fora-description">
+                                        <div class="fora-description-inner">
+                                            <h4><a href="/" class="forumtitle" title="View forum">Informations</a></h4><div class="re-sm fora-stats-sm">2 Topics 2 Posts</div><a class="feed-icon" title="Feed - Informations" href="http://gramziu.pl/phpBB/feed.php?f=2"><i class="fa fa-rss"></i></a><p>Everything you should know.</p>
+                                        </div>
+                                    </div>
+                                    <div class="fora-stats">
+                                        2 <dfn>Topics</dfn><br>2 <dfn>Posts</dfn>
+                                    </div>
+                                    <div class="fora-recent">
+                                        <span class="lastpostavatar"><img class="avatar" src="./download/file.php?avatar=2_1424820906.png" width="30" height="30" alt="User avatar" /></span><a href="./viewtopic.php?style=6&amp;f=2&amp;p=2#p2" title="Welcome" class="lastsubject">Welcome</a><br>
+
+                                        by <a href="./memberlist.php?style=6&amp;mode=viewprofile&amp;u=2" style="color: #AA0000;" class="username-coloured">Gramziu</a>
+                                        <br><a href="./viewtopic.php?style=6&amp;f=2&amp;p=2#p2" title="Go to last post" class="lastpost-time">24 Feb 2015, 21:50</a>
+                                    </div>
+                                </li>
+
+
+
+
+                                <li>
+
+                                    <div class="fora-icon forum_read_locked" title="No unread posts">
+                                        <div></div>
+                                    </div>
+                                    <div class="fora-description">
+                                        <div class="fora-description-inner">
+                                            <h4><a href="./viewforum.php?style=6&amp;f=3" class="forumtitle" title="View forum">General examples</a></h4><div class="re-sm fora-stats-sm">6 Topics 45 Posts</div><a class="feed-icon" title="Feed - General examples" href="http://gramziu.pl/phpBB/feed.php?f=3"><i class="fa fa-rss"></i></a>					<p>Examples of topics, you can see here how everything works.</p>
+                                        </div>
+                                    </div>
+                                    <div class="fora-stats">
+                                        6 <dfn>Topics</dfn><br>45 <dfn>Posts</dfn>
+                                    </div>
+                                    <div class="fora-recent">
+                                        <span class="lastpostavatar"><img class="avatar" src="./download/file.php?avatar=50_1449518818.jpg" width="30" height="30" alt="User avatar" /></span><a href="./viewtopic.php?style=6&amp;f=3&amp;p=69#p69" title="Re: Popular topic" class="lastsubject">Re: Popular topic</a><br>
+
+                                        by <a href="./memberlist.php?style=6&amp;mode=viewprofile&amp;u=50" style="color: #00AA00;" class="username-coloured">Ramziu</a>
+                                        <br><a href="./viewtopic.php?style=6&amp;f=3&amp;p=69#p69" title="Go to last post" class="lastpost-time">07 Dec 2015, 20:03</a>
+                                    </div>
+                                </li>
+
+
+
+
+                                <li>
+
+                                    <div class="fora-icon forum_link" title="No unread posts">
+                                        <div></div>
+                                    </div>
+                                    <div class="fora-description">
+                                        <div class="fora-description-inner">
+                                            <h4><a href="./viewforum.php?style=6&amp;f=5" class="forumtitle" title="View forum">Gramziu themes on ThemeForest</a></h4><div class="re-sm fora-stats-sm">25963 Total redirects</div>					<p>You can find Gramziu themes only on ThemeForest.</p>
+                                        </div>
+                                    </div>
+                                    <div class="fora-redirect">25963 <dfn>Total redirects</dfn></div>
+                                </li>
+
+
+                            </ol>
+                        </li>
+
+                        <a class="category" id="category6" style="display: none; height: 0"></a>
+                        <li class="fora-bg">
+                            <h3>
+                                <a href="./viewforum.php?style=6&amp;f=6" title="Forum category">Themes</a>
+                                <a href="/phpBB/app.php/collapse/fid_6?hash=4cab760f&amp;style=6"
+                                   class="collapse-btn collapse-hide"
+                                   data-hidden=""
+                                   data-ajax="phpbb_collapse"
+                                   data-overlay="true"
+                                   title="Toggle visibility of this forum category"
+                                   style="display: none; line-height: 0;"></a>
+                            </h3>
+                            <ol>
+
+
+
+
+
+                                <li>
+
+                                    <div class="fora-icon forum_read" title="No unread posts">
+                                        <div></div>
+                                    </div>
+                                    <div class="fora-description">
+                                        <div class="fora-description-inner">
+                                            <h4><a href="./viewforum.php?style=6&amp;f=7" class="forumtitle" title="View forum">Hawiki</a></h4><div class="re-sm fora-stats-sm">1 Topics 2 Posts</div><a class="feed-icon" title="Feed - Hawiki" href="http://gramziu.pl/phpBB/feed.php?f=7"><i class="fa fa-rss"></i></a>					<p>Simple phpBB theme.</p>
+                                        </div>
+                                    </div>
+                                    <div class="fora-stats">
+                                        1 <dfn>Topics</dfn><br>2 <dfn>Posts</dfn>
+                                    </div>
+                                    <div class="fora-recent">
+                                        <span class="lastpostavatar"><img class="avatar" src="./download/file.php?avatar=51_1449519549.jpg" width="30" height="30" alt="User avatar" /></span><a href="./viewtopic.php?style=6&amp;f=7&amp;p=70#p70" title="Re: Sample" class="lastsubject">Re: Sample</a><br>
+
+                                        by <a href="./memberlist.php?style=6&amp;mode=viewprofile&amp;u=51" class="username">Zamziu</a>
+                                        <br><a href="./viewtopic.php?style=6&amp;f=7&amp;p=70#p70" title="Go to last post" class="lastpost-time">07 Dec 2015, 20:20</a>
+                                    </div>
+                                </li>
+
+
+
+
+                                <li>
+
+                                    <div class="fora-icon forum_read" title="No unread posts">
+                                        <div></div>
+                                    </div>
+                                    <div class="fora-description">
+                                        <div class="fora-description-inner">
+                                            <h4><a href="./viewforum.php?style=6&amp;f=8" class="forumtitle" title="View forum">Ariki</a></h4><div class="re-sm fora-stats-sm">1 Topics 2 Posts</div><a class="feed-icon" title="Feed - Ariki" href="http://gramziu.pl/phpBB/feed.php?f=8"><i class="fa fa-rss"></i></a>					<p>Colourful phpBB theme.</p>
+                                        </div>
+                                    </div>
+                                    <div class="fora-stats">
+                                        1 <dfn>Topics</dfn><br>2 <dfn>Posts</dfn>
+                                    </div>
+                                    <div class="fora-recent">
+                                        <span class="lastpostavatar"><img class="avatar" src="./download/file.php?avatar=52_1449520506.jpg" width="30" height="30" alt="User avatar" /></span><a href="./viewtopic.php?style=6&amp;f=8&amp;p=71#p71" title="Re: Example" class="lastsubject">Re: Example</a><br>
+
+                                        by <a href="./memberlist.php?style=6&amp;mode=viewprofile&amp;u=52" class="username">Tamziu</a>
+                                        <br><a href="./viewtopic.php?style=6&amp;f=8&amp;p=71#p71" title="Go to last post" class="lastpost-time">07 Dec 2015, 20:36</a>
+                                    </div>
+                                </li>
+
+
+
+
+                                <li>
+
+                                    <div class="fora-icon forum_read" title="No unread posts">
+                                        <div></div>
+                                    </div>
+                                    <div class="fora-description">
+                                        <div class="fora-description-inner">
+                                            <h4><a href="./viewforum.php?style=6&amp;f=9" class="forumtitle" title="View forum">Anami</a></h4><div class="re-sm fora-stats-sm">1 Topics 2 Posts</div><a class="feed-icon" title="Feed - Anami" href="http://gramziu.pl/phpBB/feed.php?f=9"><i class="fa fa-rss"></i></a>					<p>Clear phpBB theme.</p>
+                                        </div>
+                                    </div>
+                                    <div class="fora-stats">
+                                        1 <dfn>Topics</dfn><br>2 <dfn>Posts</dfn>
+                                    </div>
+                                    <div class="fora-recent">
+                                        <span class="lastpostavatar"><img class="avatar" src="./download/file.php?avatar=53_1449520886.jpg" width="30" height="30" alt="User avatar" /></span><a href="./viewtopic.php?style=6&amp;f=9&amp;p=72#p72" title="Re: Lorem ipsum" class="lastsubject">Re: Lorem ipsum</a><br>
+
+                                        by <a href="./memberlist.php?style=6&amp;mode=viewprofile&amp;u=53" class="username">Xamziu</a>
+                                        <br><a href="./viewtopic.php?style=6&amp;f=9&amp;p=72#p72" title="Go to last post" class="lastpost-time">07 Dec 2015, 20:40</a>
+                                    </div>
+                                </li>
+
+
+                            </ol>
+                        </li>
+
+                        <a class="category" id="category10" style="display: none; height: 0"></a>
+                        <li class="fora-bg">
+                            <h3>
+                                <a href="./viewforum.php?style=6&amp;f=10" title="Forum category">Examples</a>
+                                <a href="/phpBB/app.php/collapse/fid_10?hash=60c83d3c&amp;style=6"
+                                   class="collapse-btn collapse-hide"
+                                   data-hidden=""
+                                   data-ajax="phpbb_collapse"
+                                   data-overlay="true"
+                                   title="Toggle visibility of this forum category"
+                                   style="display: none; line-height: 0;"></a>
+                            </h3>
+                            <ol>
+
+
+
+
+
+                                <li>
+
+                                    <div class="fora-icon forum_read" title="No unread posts">
+                                        <div></div>
+                                    </div>
+                                    <div class="fora-description">
+                                        <div class="fora-description-inner">
+                                            <h4><a href="./viewforum.php?style=6&amp;f=11" class="forumtitle" title="View forum">Forum with long description</a></h4><div class="re-sm fora-stats-sm">1 Topics 2 Posts</div><a class="feed-icon" title="Feed - Forum with long description" href="http://gramziu.pl/phpBB/feed.php?f=11"><i class="fa fa-rss"></i></a>					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                                        </div>
+                                    </div>
+                                    <div class="fora-stats">
+                                        1 <dfn>Topics</dfn><br>2 <dfn>Posts</dfn>
+                                    </div>
+                                    <div class="fora-recent">
+                                        <span class="lastpostavatar"><img class="avatar" src="./download/file.php?avatar=56_1449522317.jpg" width="30" height="30" alt="User avatar" /></span><a href="./viewtopic.php?style=6&amp;f=11&amp;p=77#p77" title="Re: Good topic" class="lastsubject">Re: Good topic</a><br>
+
+                                        by <a href="./memberlist.php?style=6&amp;mode=viewprofile&amp;u=56" class="username">Kamziu</a>
+                                        <br><a href="./viewtopic.php?style=6&amp;f=11&amp;p=77#p77" title="Go to last post" class="lastpost-time">07 Dec 2015, 21:06</a>
+                                    </div>
+                                </li>
+
+
+
+
+                                <li>
+
+                                    <div class="fora-icon forum_read_subforum" title="No unread posts">
+                                        <div></div>
+                                    </div>
+                                    <div class="fora-description">
+                                        <div class="fora-description-inner">
+                                            <h4><a href="./viewforum.php?style=6&amp;f=12" class="forumtitle" title="View forum">Forum with long description and subforums</a></h4><div class="re-sm fora-stats-sm">1 Topics 2 Posts</div><a class="feed-icon" title="Feed - Forum with long description and subforums" href="http://gramziu.pl/phpBB/feed.php?f=12"><i class="fa fa-rss"></i></a>					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>																						<ol class="subforums-list">
+                                                <li><a href="./viewforum.php?style=6&amp;f=13" class="subforum read" title="No unread posts">First subforum</a></li>
+                                                <li><a href="./viewforum.php?style=6&amp;f=14" class="subforum read" title="No unread posts">Second subforum</a></li>
+                                            </ol>
+                                        </div>
+                                    </div>
+                                    <div class="fora-stats">
+                                        1 <dfn>Topics</dfn><br>2 <dfn>Posts</dfn>
+                                    </div>
+                                    <div class="fora-recent">
+                                        <span class="lastpostavatar"><img class="avatar" src="./download/file.php?avatar=54_1449521014.jpg" width="30" height="30" alt="User avatar" /></span><a href="./viewtopic.php?style=6&amp;f=12&amp;p=73#p73" title="Re: Another example" class="lastsubject">Re: Another example</a><br>
+
+                                        by <a href="./memberlist.php?style=6&amp;mode=viewprofile&amp;u=54" class="username">Famziu</a>
+                                        <br><a href="./viewtopic.php?style=6&amp;f=12&amp;p=73#p73" title="Go to last post" class="lastpost-time">07 Dec 2015, 20:42</a>
+                                    </div>
+                                </li>
+
+
+
+
+                                <li>
+
+                                    <div class="fora-icon forum_read_locked" title="No unread posts">
+                                        <div></div>
+                                    </div>
+                                    <div class="fora-description">
+                                        <div class="fora-description-inner">
+                                            <h4><a href="./viewforum.php?style=6&amp;f=16" class="forumtitle" title="View forum">Locked forum with short description</a></h4><div class="re-sm fora-stats-sm">1 Topics 2 Posts</div><a class="feed-icon" title="Feed - Locked forum with short description" href="http://gramziu.pl/phpBB/feed.php?f=16"><i class="fa fa-rss"></i></a>					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                        </div>
+                                    </div>
+                                    <div class="fora-stats">
+                                        1 <dfn>Topics</dfn><br>2 <dfn>Posts</dfn>
+                                    </div>
+                                    <div class="fora-recent">
+                                        <span class="lastpostavatar"><img class="avatar" src="./download/file.php?avatar=50_1449518818.jpg" width="30" height="30" alt="User avatar" /></span><a href="./viewtopic.php?style=6&amp;f=16&amp;p=75#p75" title="Re: Next lorem ipsum text" class="lastsubject">Re: Next lorem ipsum text</a><br>
+
+                                        by <a href="./memberlist.php?style=6&amp;mode=viewprofile&amp;u=50" style="color: #00AA00;" class="username-coloured">Ramziu</a>
+                                        <br><a href="./viewtopic.php?style=6&amp;f=16&amp;p=75#p75" title="Go to last post" class="lastpost-time">07 Dec 2015, 20:55</a>
+                                    </div>
+                                </li>
+
+
+
+
+                                <li>
+
+                                    <div class="fora-icon forum_read_locked" title="No unread posts">
+                                        <div></div>
+                                    </div>
+                                    <div class="fora-description">
+                                        <div class="fora-description-inner">
+                                            <h4><a href="./viewforum.php?style=6&amp;f=17" class="forumtitle" title="View forum">Locked forum with short description and moderator</a></h4><div class="re-sm fora-stats-sm">1 Topics 2 Posts</div><a class="feed-icon" title="Feed - Locked forum with short description and moderator" href="http://gramziu.pl/phpBB/feed.php?f=17"><i class="fa fa-rss"></i></a>					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>											<strong class="re-md-r">Moderator: <a href="./memberlist.php?style=6&amp;mode=viewprofile&amp;u=2" style="color: #AA0000;" class="username-coloured">Gramziu</a></strong>
+                                        </div>
+                                    </div>
+                                    <div class="fora-stats">
+                                        1 <dfn>Topics</dfn><br>2 <dfn>Posts</dfn>
+                                    </div>
+                                    <div class="fora-recent">
+                                        <span class="lastpostavatar"><img class="avatar" src="./download/file.php?avatar=55_1449522198.jpg" width="30" height="30" alt="User avatar" /></span><a href="./viewtopic.php?style=6&amp;f=17&amp;p=76#p76" title="Re: Hello!" class="lastsubject">Re: Hello!</a><br>
+
+                                        by <a href="./memberlist.php?style=6&amp;mode=viewprofile&amp;u=55" style="color: #00AA00;" class="username-coloured">Tramziu</a>
+                                        <br><a href="./viewtopic.php?style=6&amp;f=17&amp;p=76#p76" title="Go to last post" class="lastpost-time">07 Dec 2015, 21:01</a>
+                                    </div>
+                                </li>
+
+                            </ol>
+                        </li>
+
+
+                    </ol>
+
+
+
+
+
+                </div>
+
+            </div>
+
+            <div class="main-sidebar">
+
+
+                <div class="sidebar-block">
+                    <h5 class="sidebar-head">Only on ThemeForest</h5>
+                    <div class="sidebar-body"><a href="https://themeforest.net/item/ravaio-modern-responsive-phpbb-forum-theme/13123186?ref=Gramziu"><img src="http://gramziu.pl/images/buy_it.png" style="border-radius: 2px; display: block;"></a></div>
+                </div>
+                <div class="sidebar-block">
+                    <h5 class="sidebar-head">Theme variants</h5>
+                    <div class="sidebar-body"><form method="post" id="theme-variants"></form></div>
+                </div>
+                <div class="sidebar-block">
+                    <h5 class="sidebar-head">LTR and RTL</h5>
+                    <div class="sidebar-body">
+                        <a href="http://gramziu.pl/phpBB/?style=6&language=en" style="display: block; width: 100%; border-radius: 2px; padding: 6px 18px; background-color: rgba(0, 0, 0, 0.06); text-align: center;">LTR</a>
+                        <a href="http://gramziu.pl/phpBB/?style=6&language=ar" style="display: block; width: 100%; border-radius: 2px; padding: 6px 18px; background-color: rgba(0, 0, 0, 0.06); text-align: center; margin-top: 9px;">RTL</a>
+                    </div>
+                </div>
+                <div class="sidebar-block">
+                    <h5 class="sidebar-head">Recent topics</h5>
+                    <div class="sidebar-body"><div id="sidebar-recent-topics" class="loading"></div></div>
+                </div>
+            </div>
+
+        </div>
+
+
+    </div
+</div>
