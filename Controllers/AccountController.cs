@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Options;
+using Microsoft.AspNetCore.Http;
 using System.Data;
 using System.Data.SqlClient;
 using MC_Forum.Models;
@@ -13,9 +14,6 @@ namespace MC_Forum.Controllers
     public class AccountController : Controller 
     {
         private readonly MyConfig _options;
-        const string SessionUsername = "_Username";
-        const string SessionUserID = "_UserID";
-
         public AccountController(IOptions<MyConfig> optionsAccessor) 
         {
             _options = optionsAccessor.Value;
@@ -70,7 +68,7 @@ namespace MC_Forum.Controllers
         {
             using (SqlConnection connection = new SqlConnection(_options.ConnectionString))
             {
-                string query = String.Format("SELECT * FROM UserAccounts WHERE Username='{0}' and UserPassword='{1}'", 
+                string query = String.Format("SELECT UserID, Username FROM UserAccounts WHERE Username='{0}' and UserPassword='{1}'", 
                     user.Username, user.UserPassword);
                 using (SqlCommand command = new SqlCommand(query, connection))
                 {
@@ -82,9 +80,12 @@ namespace MC_Forum.Controllers
                         {
                             reader.Read();
                             IDataRecord record = (IDataRecord) reader;
-                            Console.WriteLine(String.Format("Account: {0}", record[1]));
-                            return RedirectToAction("Index", "Home");
+                    
+                            // Requires using Microsoft.AspNetCore.Http;
+                            HttpContext.Session.SetString("Username", (string)record[1]);
+                            HttpContext.Session.SetInt32("UserID", (int)record[0]);
 
+                            return RedirectToAction("Index", "Home");
                         }
                         else
                         {
@@ -110,6 +111,7 @@ namespace MC_Forum.Controllers
 
         public IActionResult LogOut()
         {
+            HttpContext.Session.Clear();
             // Still needs to log out properly.
             return RedirectToAction("Index", "Home");
         }

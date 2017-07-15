@@ -124,7 +124,25 @@
                     <a id="logo" href="./index.php?style=6" title="Board index"><span class="imageset site_logo"></span></a>
                     <nav>
                         <ul class="site-nav">
-
+                         @if (ViewData["Username"] == null)
+                         {
+                            <li>
+                                @Html.ActionLink("Login", "Login", "Account")
+                            </li>
+                            <li>
+                                @Html.ActionLink("Register", "Register", "Account")
+                            </li>
+                         }
+                         else
+                         {
+                            <li class="re-md-r">
+                                <a href="#" class="w-drop" data-toggle="dropdown">@ViewData["Username"]</a>
+                                <ul class="dropdown-box">
+                                    <li>@Html.ActionLink("View Profile", "Profile", "Account")</li>
+                                    <li>@Html.ActionLink("Logout", "LogOut", "Account")</li>
+                                </ul>
+                            </li>
+                          }
                             <li id="main-search-box" class="re-md-r">
                                 <a data-toggle="dropdown" class="w-drop" href="./search.php?style=6"><i class="fa fa-search"></i></a>
                                 <div class="dropdown-search">
@@ -511,11 +529,7 @@
             </div>
         </div>
     </div>
-
     <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-
-
-
     <script>
         $(window).load(function () {
             var minheight = $(window).height();
@@ -688,20 +702,20 @@
 
     </script>
     @RenderSection("scripts", required: false)
-    <script type="text/javascript" src="~/content/js/collapsiblecategories.js?assets_version=174"></script>
+    <script type="text/javascript" src="~/js/collapsiblecategories.js?assets_version=174"></script>
 
-    <script type="text/javascript" src="~/content/js/boardannouncements.js?assets_version=174"></script>
+    <script type="text/javascript" src="~/js/boardannouncements.js?assets_version=174"></script>
 
-    <script type="text/javascript" src="~/content/js/core.min.js?assets_version=174"></script>
+    <script type="text/javascript" src="~/js/core.min.js?assets_version=174"></script>
 
-    <script type="text/javascript" src="~/content/js/forum_fn.min.js?assets_version=174"></script>
+    <script type="text/javascript" src="~/js/forum_fn.min.js?assets_version=174"></script>
 
-    <script type="text/javascript" src="~/content/js/ajax.min.js?assets_version=174"></script>
+    <script type="text/javascript" src="~/js/ajax.min.js?assets_version=174"></script>
 
-    <script type="text/javascript" src="~/content/js/bootstrap.min.js?assets_version=174"></script>
+    <script type="text/javascript" src="~/js/bootstrap.min.js?assets_version=174"></script>
 
-    <script type="text/javascript" src="~/content/js/chosen.jquery.min.js?assets_version=174"></script>
+    <script type="text/javascript" src="~/js/chosen.jquery.min.js?assets_version=174"></script>
 
-    <script type="text/javascript" src="~/content/js/jquery.sticky.min.js?assets_version=174"></script>
+    <script type="text/javascript" src="~/js/jquery.sticky.min.js?assets_version=174"></script>
 </body>
 </html>

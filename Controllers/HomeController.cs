@@ -4,6 +4,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Http;
 using MC_Forum.Models;
 using Microsoft.Extensions.Options;
 using System.Data.SqlClient;
@@ -22,18 +23,11 @@ namespace MC_Forum.Controllers
         }
         public IActionResult Index()
         {
-            // using (SqlConnection connection = new SqlConnection(@"Data Source=173.56.89.207,1433;Initial Catalog=MC_Forum;User ID=sa;Password=Supersecretpassword12"))
-            // {
-            //     using (SqlCommand command = new SqlCommand("Select * from Alex", connection))
-            //     {
-            //         Console.WriteLine("Hello");
-            //         connection.Open();
-            //         Console.WriteLine("Connection opened!");
-            //         command.ExecuteReader();
-            //         Console.WriteLine("Command executed!");
-            //     }
-            // }
-            Console.WriteLine("connection string: " + _options.ConnectionString);
+            if (HttpContext.Session.GetString("Username") != null)
+            {
+                ViewData["Username"] = HttpContext.Session.GetString("Username");
+                Console.WriteLine($"{HttpContext.Session.GetString("Username")} is currently in session.");
+            } 
             return View();
         }
 

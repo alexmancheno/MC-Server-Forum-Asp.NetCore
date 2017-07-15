@@ -40,7 +40,7 @@ namespace MC_Forum
         services.AddSession(options =>
         {
             options.CookieName = ".AdventureWorks.Session";
-            options.IdleTimeout = TimeSpan.FromSeconds(10);
+            options.IdleTimeout = TimeSpan.FromSeconds(30);
         });
 
     }
@@ -56,6 +56,8 @@ namespace MC_Forum
             {
                 app.UseExceptionHandler("/Home/Error");
             }
+
+            app.UseSession();
 
             app.UseStaticFiles();
 
