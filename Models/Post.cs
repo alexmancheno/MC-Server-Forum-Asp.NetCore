@@ -18,6 +18,10 @@ namespace MC_Forum.Models
         [Required(ErrorMessage = "Post body is required.")]
         public string PostBody { get; set; }
 
+        public int PostTopic { get; set; } 
+
+        public DateTime DatePosted { get; set; }
+
         [Key]
         [ForeignKey("ID")]
         public int UserID { get; set; }

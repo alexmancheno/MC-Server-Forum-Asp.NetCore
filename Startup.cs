@@ -40,7 +40,8 @@ namespace MC_Forum
         services.AddSession(options =>
         {
             options.CookieName = ".AdventureWorks.Session";
-            options.IdleTimeout = TimeSpan.FromSeconds(30);
+            options.IdleTimeout = TimeSpan.FromSeconds(35);
+        
         });
 
     }

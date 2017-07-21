@@ -1,7 +1,7 @@
 # Minecraft Server Forum - built with ASP.NET Core 2.0 Preview 2
 This project is currently viewable at [alexmancheno.me](http://alexmancheno.me/).
 
-Here's the description about what Asp.Net Core is from [Microsoft](https://docs.microsoft.com/en-us/aspnet/core/):
+Here's the description of Asp.Net Core from [Microsoft](https://docs.microsoft.com/en-us/aspnet/core/):
 
 "ASP.NET Core is a new open-source and cross-platform framework for building modern cloud-based Internet-connected applications, such as web apps, IoT apps and mobile backends. It was architected to provide an optimized development framework for apps that are deployed to the cloud or run on-premises. It consists of modular components with minimal overhead, so you retain flexibility while constructing your solutions. You can develop and run ASP.NET Core apps on Windows, Mac and Linux. ASP.NET Core apps can run on .NET Core or on the .NET Framework.
 
