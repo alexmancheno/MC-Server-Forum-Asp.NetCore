@@ -1,7 +1,6 @@
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+using System.Data;
 using System.Data.SqlClient;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Http;
@@ -20,7 +19,36 @@ namespace MC_Forum.Controllers
         }
         public IActionResult Index()
         {
-            return View();
+            if (HttpContext.Session.GetString("Username") != null)
+            {
+                ViewData["Username"] = HttpContext.Session.GetString("Username");
+            }
+
+            SqlDataAdapter da = new SqlDataAdapter();
+            DataSet ds = new DataSet();
+            DataTable dt = new DataTable();
+            List<Post> list = new List<Post>();
+            using (SqlConnection connection = new SqlConnection(_options.ConnectionString))
+            {
+                string query = "Select * FROM Posts WHERE PostTopic=0";
+                da.SelectCommand = new SqlCommand(query, connection);
+                da.Fill(ds, "Table");
+                dt = ds.Tables["Table"];
+                Console.WriteLine($"Size of: {dt.Rows.Count}");
+                foreach (DataRow row in dt.Rows)
+                {
+                    Post post = new Post();
+                    post.ID = (int)row[0];
+                    post.PostTitle = (string)row[1];
+                    post.PostBody = (string)row[2];
+                    post.PostTopic = (int)row[3];
+                    // Missing DatePosted field!!!
+                    post.UserID = (int)row[4];
+                    list.Add(post);
+                    // Console.WriteLine($"{row[0]}, {row[1]}, {row[2]}, {row[3]}, {row[4]}");
+                }
+            }
+            return View(list);
         }
 
         public IActionResult SubmitPost()
@@ -28,6 +56,10 @@ namespace MC_Forum.Controllers
             if (HttpContext.Session.GetString("Username") == null)
             {
                 return RedirectToAction("Login", "Account");
+            }
+            else
+            {
+                ViewData["Username"] = HttpContext.Session.GetString("Username");   
             }
             return View();
         }
@@ -44,10 +76,8 @@ namespace MC_Forum.Controllers
                     {
                         try 
                         {
-                            Console.WriteLine(query);
                             connection.Open();
                             command.ExecuteNonQuery();
-                            Console.WriteLine("Success submitting post!");
                         }
                         catch (Exception e)
                         {

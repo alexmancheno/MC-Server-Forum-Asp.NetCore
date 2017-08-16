@@ -14,8 +14,8 @@ namespace MC_Forum.Controllers
     public class HomeController : Controller
     {
         private readonly MyConfig _options;
-        const string SessionUsername = "_Username";
-        const string SessionUserID = "_UserID";
+        const string SessionKeyUsername = "_Username";
+        const string SessionKeyUserID = "_UserID";
 
         public HomeController(IOptions<MyConfig> optionsAccessor) 
         {
@@ -26,7 +26,6 @@ namespace MC_Forum.Controllers
             if (HttpContext.Session.GetString("Username") != null)
             {
                 ViewData["Username"] = HttpContext.Session.GetString("Username");
-                Console.WriteLine($"{HttpContext.Session.GetString("Username")} is currently in session.");
             } 
             return View();
         }
@@ -34,12 +33,19 @@ namespace MC_Forum.Controllers
         public IActionResult About()
         {
             ViewData["Message"] = "Your application description page.";
-
+            if (HttpContext.Session.GetString("Username") != null)
+            {
+                ViewData["Username"] = HttpContext.Session.GetString("Username");
+            } 
             return View();
         }
 
         public IActionResult Contact()
         {
+            if (HttpContext.Session.GetString("Username") != null)
+            {
+                ViewData["Username"] = HttpContext.Session.GetString("Username");
+            } 
             ViewData["Message"] = "Your contact page.";
 
             return View();

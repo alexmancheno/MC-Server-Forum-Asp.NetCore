@@ -1,19 +1,46 @@
+@model IEnumerable<MC_Forum.Models.Post>
 @{
     ViewBag.Title = "Index";
 }
-<div id="sub-header">
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PostTitle)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PostBody)
+        </th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.ID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PostTitle)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PostBody)
+        </td>
+    </tr>
+}
+</table>
+<!-- <div id="sub-header">
 	<div class="chunk">
 		<div class="sub-header-title">
-						<h2 class="forum-title"><a href="./viewforum.php?style=6&amp;f=2&amp;sid=33c7bf04e121ab68179c7d40f620857b">Informations</a></h2>
+						<h2 class="forum-title"><a href="./viewforum.php?style=6&amp;f=2&amp;sid=33c7bf04e121ab68179c7d40f620857b">News</a></h2>
 									<div>
 							</div>
 					</div>
 					<div class="sub-header-buttons">
-				
-									<a href="/news/submitpost" class="button icon-button post-icon" title="Post a new topic">
-						<i class="fa fa-pencil"></i><span>New Topic</span>					</a>
-				
-							</div>
+						<a href="/news/submitpost" class="button icon-button post-icon" title="Post a new topic">
+						<i class="fa fa-pencil"></i><span>New Topic</span></a>
+					</div>
 			</div>
 </div>
 <div id="mbrs" class="background-main">
@@ -221,4 +248,4 @@
 
 	</div>
 	</div>
-</div>
+</div> -->

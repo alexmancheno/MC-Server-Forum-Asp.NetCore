@@ -4,6 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Web;
+using System.Data;
 
 namespace MC_Forum.Models
 {
@@ -26,5 +27,15 @@ namespace MC_Forum.Models
         [ForeignKey("ID")]
         public int UserID { get; set; }
         public virtual UserAccount user { get; set; }
+
+        // public Post(DataRow row)
+        // {
+        //     ID = (int)row[0];
+        //     PostTitle = (string)row[1];
+        //     PostBody = (string)row[2];
+        //     PostTopic = (int)row[3];
+        //     // Missing DatePosted field!!!
+        //     UserID = (int)row[4];
+        // }
     }
 }

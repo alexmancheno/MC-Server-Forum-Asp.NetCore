@@ -9,18 +9,46 @@ using System.Data;
 using System.Data.SqlClient;
 using MC_Forum.Models;
 
-namespace MC_Forum.Controllers 
+namespace MC_Forum.Controllers
 {
-    public class AccountController : Controller 
+    public class AccountController : Controller
     {
         private readonly MyConfig _options;
-        public AccountController(IOptions<MyConfig> optionsAccessor) 
+        public AccountController(IOptions<MyConfig> optionsAccessor)
         {
             _options = optionsAccessor.Value;
         }
-        public IActionResult Index() 
+        public IActionResult Index()
         {
-
+            using (SqlConnection connection = new SqlConnection(_options.ConnectionString))
+            {
+                string query = $"SELECT * FROM UserAccounts;";
+                SqlDataAdapter da = new SqlDataAdapter();
+                DataSet ds = new DataSet();
+                DataTable dt = new DataTable();
+                List<UserAccount> list = new List<UserAccount>();
+                try
+                {
+                    da.SelectCommand = new SqlCommand(query, connection);
+                    da.Fill(ds, "Table");
+                    dt = ds.Tables["Table"];
+                    foreach (DataRow row in dt.Rows)
+                    {
+                        UserAccount user = new UserAccount();
+                        user.ID = (int) row[0];
+                        user.FirstName = (string) row[1];
+                        user.LastName = (string) row[2];
+                        user.Email = (string) row[3];
+                        user.Username = (string) row[4];
+                        list.Add(user);
+                    }
+                    return View(list);
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine($"There was an error retrieving user accounts: \n {e.GetBaseException()} \n {e.StackTrace}");
+                }
+            }
             return View();
         }
 
@@ -36,12 +64,12 @@ namespace MC_Forum.Controllers
             {
                 using (SqlConnection connection = new SqlConnection(_options.ConnectionString))
                 {
-                    string query = String.Format("INSERT INTO UserAccounts (FirstName, LastName, Email, Username," +
-                        "UserPassword, ConfirmPassword) values ('{0}', '{1}', '{2}', '{3}', '{4}', '{5}')", 
-                        account.FirstName, account.LastName, account.Email, account.Username, account.UserPassword, account.ConfirmPassword);
+                    string query = $"INSERT INTO UserAccounts (FirstName, LastName, Email, Username, UserPassword" +
+                    $"ConfirmPassword) values ('{account.FirstName}', '{account.LastName}', '{account.Email}', '{account.Username}'" +
+                    $"'{account.UserPassword}', '{account.ConfirmPassword}');";
                     using (SqlCommand command = new SqlCommand(query, connection))
                     {
-                        try 
+                        try
                         {
                             connection.Open();
                             command.ExecuteNonQuery();
@@ -50,14 +78,14 @@ namespace MC_Forum.Controllers
                         {
                             Console.WriteLine("Error trying to register user: \n " + e.StackTrace);
                         }
-                    }    
+                    }
                 }
                 ModelState.Clear();
                 return RedirectToAction("Login", "Account");
             }
             return View();
         }
-                // Login 
+
         public ActionResult Login()
         {
             return View();
@@ -68,19 +96,18 @@ namespace MC_Forum.Controllers
         {
             using (SqlConnection connection = new SqlConnection(_options.ConnectionString))
             {
-                string query = String.Format("SELECT UserID, Username FROM UserAccounts WHERE Username='{0}' and UserPassword='{1}'", 
-                    user.Username, user.UserPassword);
+                string query = $"SELECT UserID, Username FROM UserAccounts WHERE Username='{user.Username}' and UserPassword='{user.UserPassword}';";
                 using (SqlCommand command = new SqlCommand(query, connection))
                 {
-                    try 
+                    try
                     {
                         connection.Open();
                         SqlDataReader reader = command.ExecuteReader();
                         if (reader.HasRows)
                         {
                             reader.Read();
-                            IDataRecord record = (IDataRecord) reader;
-                    
+                            IDataRecord record = (IDataRecord)reader;
+
                             // Requires using Microsoft.AspNetCore.Http;
                             HttpContext.Session.SetString("Username", (string)record[1]);
                             HttpContext.Session.SetInt32("UserID", (int)record[0]);
@@ -95,7 +122,7 @@ namespace MC_Forum.Controllers
                     }
                     catch (Exception e)
                     {
-                        Console.WriteLine("There was an error trying to login user. \n" 
+                        Console.WriteLine("There was an error trying to login user. \n"
                             + e.GetBaseException() + ":\n" + e.StackTrace);
                     }
                 }
@@ -112,7 +139,6 @@ namespace MC_Forum.Controllers
         public IActionResult LogOut()
         {
             HttpContext.Session.Clear();
-            // Still needs to log out properly.
             return RedirectToAction("Index", "Home");
         }
     }
